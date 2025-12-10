@@ -1,0 +1,74 @@
+\documentclass{beamer}
+
+% --- PRÉAMBULE (CONFIGURATION GLOBALE) ---
+\usetheme{Boadilla}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{multicol} 
+\usepackage{tikz} 
+\usepackage{subfig} 
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+\usepackage{scrextend} 
+
+\setcounter{tocdepth}{1} 
+
+\hypersetup{ 
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=black,      
+    urlcolor=blue,
+}
+
+% Configuration Sommaire automatique
+\AtBeginSection[] 
+{
+  \begin{frame}
+    \frametitle{Sommaire}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+% Configuration Logo
+\newif\ifplacelogo 
+\placelogotrue 
+\logo{\ifplacelogo\includegraphics[height=5mm]{logoINSA.png}\fi} 
+
+% --- INFOS TITRE ---
+\title{HAAR}
+\subtitle{Comprendre l'algorithme pionnier de la reconnaissance faciale rapide.}
+\author[AA \--- ZB \--- RA \--- AI]{Aziz AYARI \\ Zakaria BARHOUMI \\ Rayen BEN ABDERRAHMANE \\ Ali IKCHED}
+\institute[INSA Rouen]{INSA \--- Institut National des Sciences Appliquées de Rouen}
+\date{Décembre 2025}
+
+% --- DÉBUT DU DOCUMENT ---
+\begin{document}
+
+% Page de titre
+\begin{frame}
+\titlepage
+\end{frame}
+\placelogofalse
+
+% Sommaire global
+\begin{frame}
+\frametitle{Sommaire} 
+\tableofcontents
+\end{frame} 
+
+
+\input{sections/intro.tex}
+
+\input{sections/aziz.tex}
+
+\input{sections/zakaria.tex}
+
+\input{sections/rayen.tex}
+
+\input{sections/ali.tex}
+
+\input{sections/conclusion.tex}
+
+\input{sections/bibliographie.tex}
+
+\end{document}
